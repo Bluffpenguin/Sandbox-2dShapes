@@ -40,7 +40,7 @@ rightEyeX = displayWidth*2.5/4;
 rightEyeY = leftEyeY; //Best Practice: change one line of code
 eyeDiameter = smallerDisplayDimension*1/4;
 mouthX1 = leftEyeX;
-mouthY1 = displayWidth*3/4;
+mouthY1 = displayHeight*3/4;
 mouthX2 = rightEyeX;
 mouthY2 = mouthY1;
 //
@@ -59,6 +59,7 @@ ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
 //
 //Nose
 //rect();
+triangle(xNose1, yNose1, xNose2, yNose2, xNose3, yNose3);
 //
 //Mouth
 //rect();
