@@ -10,7 +10,7 @@ float xNose1, yNose1, xNose2, yNose2, xNose3, yNose3;
 fullScreen(); //size(); displayWidth, displayHeight
 //Landscape, not square or portrait
 println (width, height, displayWidth, displayHeight); //Verification of values
-int appWidth = width, appHeight = height;
+int appWidth = width, appHeight = height; //Swap with displayWidth, displayHeight for testing
 println(appWidth, appHeight);
 //
 //Display Orientation: a few comparisons for IFs
@@ -30,30 +30,30 @@ if ( orientation=="Landscape or Square")
 
 //
 //Variable Population
-reset = smallerDisplayDimension / smallerDisplayDimension //returns "1"
-smallerDisplayDimension = displayHeight; //ALWAYS in Landscape
-rectFaceX = (displayWidth*1/2) - (smallerDisplayDimension*1/2);
-rectFaceY =displayHeight*0;
+smallerDisplayDimension = appHeight; //ALWAYS in Landscape
+reset = smallerDisplayDimension / smallerDisplayDimension; //returns "1"
+rectFaceX = (appWidth*1/2) - (smallerDisplayDimension*1/2);
+rectFaceY =appHeight*0;
 rectFaceWidth = smallerDisplayDimension; //Square Shape
 rectFaceHeight = smallerDisplayDimension; //Square Shape
-faceX = displayWidth*1/2;
-faceY = displayHeight*1/2;
+faceX = appWidth*1/2;
+faceY = appHeight*1/2;
 faceDiameter = smallerDisplayDimension;
-leftEyeX = displayWidth*1.5/4;
-leftEyeY = displayHeight*1/4;
-rightEyeX = displayWidth*2.5/4;
+leftEyeX = appWidth*1.5/4;
+leftEyeY = appHeight*1/4;
+rightEyeX = appWidth*2.5/4;
 rightEyeY = leftEyeY; //Best Practice: change one line of code
 eyeDiameter = smallerDisplayDimension*1/4;
 mouthX1 = leftEyeX;
-mouthY1 = displayHeight*3/4;
+mouthY1 = appHeight*3/4;
 mouthX2 = rightEyeX;
 mouthY2 = mouthY1;
 mouthOpen = smallerDisplayDimension*1/4;
 xNose1 = faceX;
-yNose1 = leftEyeX;
-xNose2 = ;
-yNose2 = ;
-xNose3 = ;
+yNose1 = leftEyeY;
+xNose2 = faceX - leftEyeY*1/2;
+yNose2 = faceY;
+xNose3 = faceX + leftEyeY*1/2;
 yNose3 = faceY ;
 //
 //Face: Circle = Inscribing a Circle in a Square
