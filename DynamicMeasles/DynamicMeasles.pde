@@ -55,6 +55,31 @@ void setup()
   xNose3 = faceX + leftEyeY*1/2;
   yNose3 = faceY ;
   //
+  //Face: Circle = Inscribing a Circle in a Square
+  //Center a circle on display orientation
+  rect(rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight);
+  ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  //
+  //Left Eye
+  rect(leftEyeX-eyeDiameter*1/2, leftEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
+  ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
+  //
+  //Right Eye
+  rect(rightEyeX-eyeDiameter*1/2, rightEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
+  ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
+  //
+  //Nose
+  rect(xNose2, yNose1, xNose3-xNose2, yNose3-yNose1);
+  triangle(xNose1, yNose1, xNose2, yNose2, xNose3, yNose3);
+  //
+  //Mouth
+  int mouthWidth = int (mouthX2 - mouthX1);
+  int mouthHeight = mouthOpen;
+  rect(mouthX1-mouthOpen*1/2, mouthY1-mouthOpen*1/2, mouthWidth+mouthOpen, mouthHeight);
+  strokeWeight(mouthOpen); //testing: 100=400/4 mouthOpen=height*1/4
+  line(mouthX1, mouthY1, mouthX2, mouthY2);
+  strokeWeight(reset); //reset to 1 pixel
+  //
 } //End setup
 //
 void draw() 
@@ -71,52 +96,25 @@ void mousePressed()
 //
 //End Main Program
 
-/*
 
- //
- 
- //Face: Circle = Inscribing a Circle in a Square
- //Center a circle on display orientation
- rect(rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight);
- ellipse(faceX, faceY, faceDiameter, faceDiameter);
- //
- //Left Eye
- rect(leftEyeX-eyeDiameter*1/2, leftEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
- ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
- //
- //Right Eye
- rect(rightEyeX-eyeDiameter*1/2, rightEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
- ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
- //
- //Nose
- rect(xNose2, yNose1, xNose3-xNose2, yNose3-yNose1);
- triangle(xNose1, yNose1, xNose2, yNose2, xNose3, yNose3);
- //
- 
- //Mouth
- int mouthWidth = int (mouthX2 - mouthX1);
- int mouthHeight = mouthOpen;
- rect(mouthX1-mouthOpen*1/2, mouthY1-mouthOpen*1/2, mouthWidth+mouthOpen, mouthHeight);
- strokeWeight(mouthOpen); //testing: 100=400/4 mouthOpen=height*1/4
- line(mouthX1, mouthY1, mouthX2, mouthY2);
- strokeWeight(reset); //reset to 1 pixel
- //
- //Measle
- float measleDiameter = random(smallerDisplayDimension*1/100 , smallerDisplayDimension*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
- float measleRadius = measleDiameter*1/2;
- println (measleRadius);
- float measleX = random( rectFaceX+measleRadius, ( ( rectFaceX+rectFaceWidth) - measleRadius) );
- float measleY = random( rectFaceY+measleRadius, ( ( rectFaceY+rectFaceHeight) - measleRadius) );
- Boolean nightMode=false; //Note: IF-ELSE similar to ternary operator
- //color red=#FF0000, measleColour=red, whiteReset=#000000;
- color measleColour = ( nightMode=false ) ? color ( 255, random(0,50), random(120) ) : color ( 255, random(50), 0 ) ; //ternary operator for day:night
- color whiteReset=#000000; // Note: need ranger here too
- //
- rect(measleX-measleDiameter*1/2, measleY-measleDiameter*1/2, measleDiameter, measleDiameter);
- //random values given other variables (similar to button code)
- noStroke(); //Shape outline
- fill(measleColour);
- ellipse( measleX, measleY, measleDiameter, measleDiameter );
- stroke(reset);
- fill(whiteReset); //reset to first colour (i.e blackReset
- */
+
+
+//Measle
+float measleDiameter = random(smallerDisplayDimension*1/100, smallerDisplayDimension*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
+float measleRadius = measleDiameter*1/2;
+println (measleRadius);
+float measleX = random( rectFaceX+measleRadius, ( ( rectFaceX+rectFaceWidth) - measleRadius) );
+float measleY = random( rectFaceY+measleRadius, ( ( rectFaceY+rectFaceHeight) - measleRadius) );
+Boolean nightMode=false; //Note: IF-ELSE similar to ternary operator
+//color red=#FF0000, measleColour=red, whiteReset=#000000;
+color measleColour = ( nightMode=false ) ? color ( 255, random(0, 50), random(120) ) : color ( 255, random(50), 0 ) ; //ternary operator for day:night
+color whiteReset=#000000; // Note: need ranger here too
+//
+rect(measleX-measleDiameter*1/2, measleY-measleDiameter*1/2, measleDiameter, measleDiameter);
+//random values given other variables (similar to button code)
+noStroke(); //Shape outline
+fill(measleColour);
+ellipse( measleX, measleY, measleDiameter, measleDiameter );
+stroke(reset);
+fill(whiteReset); //reset to first colour (i.e blackReset
+*/
