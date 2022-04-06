@@ -54,32 +54,13 @@ void setup()
   yNose2 = faceY;
   xNose3 = faceX + leftEyeY*1/2;
   yNose3 = faceY ;
+  int mouthWidth = int (mouthX2 - mouthX1);
+  int mouthHeight = mouthOpen;
   //
   //Face: Circle = Inscribing a Circle in a Square
   //Center a circle on display orientation
-  rect(rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight);
+  //rect(rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
-  //
-  //Left Eye
-  rect(leftEyeX-eyeDiameter*1/2, leftEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
-  ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
-  //
-  //Right Eye
-  rect(rightEyeX-eyeDiameter*1/2, rightEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
-  ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
-  //
-  //Nose
-  rect(xNose2, yNose1, xNose3-xNose2, yNose3-yNose1);
-  triangle(xNose1, yNose1, xNose2, yNose2, xNose3, yNose3);
-  //
-  //Mouth
-  int mouthWidth = int (mouthX2 - mouthX1);
-  int mouthHeight = mouthOpen;
-  rect(mouthX1-mouthOpen*1/2, mouthY1-mouthOpen*1/2, mouthWidth+mouthOpen, mouthHeight);
-  strokeWeight(mouthOpen); //testing: 100=400/4 mouthOpen=height*1/4
-  line(mouthX1, mouthY1, mouthX2, mouthY2);
-  strokeWeight(reset); //reset to 1 pixel
-  //
 } //End setup
 //
 void draw() 
@@ -95,13 +76,32 @@ void draw()
   color measleColour = ( nightMode=false ) ? color ( 255, random(0, 50), random(120) ) : color ( 255, random(50), 0 ) ; //ternary operator for day:night
   color whiteReset=#000000; // Note: need ranger here too
   //
-  rect(measleX-measleDiameter*1/2, measleY-measleDiameter*1/2, measleDiameter, measleDiameter);
+  //rect(measleX-measleDiameter*1/2, measleY-measleDiameter*1/2, measleDiameter, measleDiameter);
   //random values given other variables (similar to button code)
   noStroke(); //Shape outline
   fill(measleColour);
   ellipse( measleX, measleY, measleDiameter, measleDiameter );
   stroke(reset);
   fill(whiteReset); //reset to first colour (i.e blackReset)
+  //
+  //Left Eye
+  //rect(leftEyeX-eyeDiameter*1/2, leftEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
+  ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
+  //
+  //Right Eye
+  //rect(rightEyeX-eyeDiameter*1/2, rightEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
+  ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
+  //
+  //Nose
+  //rect(xNose2, yNose1, xNose3-xNose2, yNose3-yNose1);
+  triangle(xNose1, yNose1, xNose2, yNose2, xNose3, yNose3);
+    //
+    //Mouth
+  //rect(mouthX1-mouthOpen*1/2, mouthY1-mouthOpen*1/2, mouthWidth+mouthOpen, mouthHeight);
+  strokeWeight(mouthOpen); //testing: 100=400/4 mouthOpen=height*1/4
+  line(mouthX1, mouthY1, mouthX2, mouthY2);
+  strokeWeight(reset); //reset to 1 pixel
+  //
 } //End draw
 //
 void keyPressed() 
