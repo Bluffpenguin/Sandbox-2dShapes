@@ -5,6 +5,8 @@ float faceX, faceY, faceDiameter;
 float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDiameter;
 float mouthX1, mouthY1, mouthX2, mouthY2;
 float xNose1, yNose1, xNose2, yNose2, xNose3, yNose3;
+float measleDiameter, measleRadius, measleX, measleY;
+int mouthWidth, mouthHeight;
 //
 void setup() 
 {
@@ -66,15 +68,15 @@ void setup()
 void draw() 
 {
   //Measle
-  float measleDiameter = random(smallerDisplayDimension*1/100, smallerDisplayDimension*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
-  float measleRadius = measleDiameter*1/2;
+  measleDiameter = random(smallerDisplayDimension*1/100, smallerDisplayDimension*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
+  measleRadius = measleDiameter*1/2;
   println (measleRadius);
-  float measleX = random( rectFaceX+measleRadius, ( ( rectFaceX+rectFaceWidth) - measleRadius) );
-  float measleY = random( rectFaceY+measleRadius, ( ( rectFaceY+rectFaceHeight) - measleRadius) );
+  measleX = random( rectFaceX+measleRadius, ( ( rectFaceX+rectFaceWidth) - measleRadius) );
+  measleY = random( rectFaceY+measleRadius, ( ( rectFaceY+rectFaceHeight) - measleRadius) );
   Boolean nightMode=false; //Note: IF-ELSE similar to ternary operator
   //color red=#FF0000, measleColour=red, whiteReset=#000000;
   color measleColour = ( nightMode=false ) ? color ( 255, random(0, 50), random(120) ) : color ( 255, random(50), 0 ) ; //ternary operator for day:night
-  color whiteReset=#000000; // Note: need ranger here too
+  color whiteReset=#FFFFFF; // Note: need ranger here too
   //
   //rect(measleX-measleDiameter*1/2, measleY-measleDiameter*1/2, measleDiameter, measleDiameter);
   //random values given other variables (similar to button code)
@@ -101,6 +103,8 @@ void draw()
   strokeWeight(mouthOpen); //testing: 100=400/4 mouthOpen=height*1/4
   line(mouthX1, mouthY1, mouthX2, mouthY2);
   strokeWeight(reset); //reset to 1 pixel
+  mouthWidth = int (mouthX2 - mouthX1);
+  mouthHeight = mouthOpen;
   //
 } //End draw
 //
