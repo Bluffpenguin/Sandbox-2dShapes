@@ -4,7 +4,8 @@ Boolean nightMode=false;
 int reset, smallerDisplayDimension;
 color whiteReset;
 //
-float eyeDiameter;
+float eyeDiameter, pupilDiameter;
+color pupilColour;
 //
 void setup() 
 {
@@ -12,6 +13,7 @@ void setup()
   displaySetup();
   population();
   faceSetup();
+  PupilcolourSetup();
 } //End setup
 //
 void draw() 
