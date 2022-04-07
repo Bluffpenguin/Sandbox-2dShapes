@@ -1,3 +1,7 @@
+//Global Variables
+float measleDiameter, measleRadius, measleX, measleY;
+color measleColour;
+//
 void measleDraw() 
 {
   //Measle
@@ -6,10 +10,10 @@ void measleDraw()
   println (measleRadius);
   measleX = random( rectFaceX+measleRadius, ( ( rectFaceX+rectFaceWidth) - measleRadius) );
   measleY = random( rectFaceY+measleRadius, ( ( rectFaceY+rectFaceHeight) - measleRadius) );
-  Boolean nightMode=false; //Note: IF-ELSE similar to ternary operator
+  nightMode=false; //Note: IF-ELSE similar to ternary operator
   //color red=#FF0000, measleColour=red, whiteReset=#000000;
-  color measleColour = ( nightMode=false ) ? color ( 255, random(0, 50), random(120) ) : color ( 255, random(50), 0 ) ; //ternary operator for day:night
-  color whiteReset=#FFFFFF; // Note: need ranger here too
+  measleColour = ( nightMode=false ) ? color ( 255, random(0, 50), random(120) ) : color ( 255, random(50), 0 ) ; //ternary operator for day:night
+  whiteReset=#FFFFFF; // Note: need ranger here too
   //
   //rect(measleX-measleDiameter*1/2, measleY-measleDiameter*1/2, measleDiameter, measleDiameter);
   //random values given other variables (similar to button code)

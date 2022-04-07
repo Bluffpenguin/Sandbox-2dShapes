@@ -1,3 +1,7 @@
+//Global Variables
+float faceX, faceY, faceDiameter;
+float rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight;
+//
 void faceSetup() 
 {
   //Face: Circle = Inscribing a Circle in a Square
