@@ -5,6 +5,7 @@ color measleColour;
 void measleDraw() 
 {
   //Measle
+  delay(250);
   measleDiameter = random(smallerDisplayDimension*1/100, smallerDisplayDimension*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
   measleRadius = measleDiameter*1/2;
   println (measleRadius);
