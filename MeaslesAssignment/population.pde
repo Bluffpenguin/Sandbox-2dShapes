@@ -29,5 +29,22 @@ void population ()
   xNose2 = faceX;
   yNose2 = faceY;
   xNose3 = faceX + leftEyeY;
-  yNose3 = faceY ;
+  yNose3 = faceY;
+  pic1Width = 1200;
+  pic1Height = 1075;
+  rectXPic1 = displayWidth*7.5/10;
+  rectYPic1 = displayHeight*1/10;
+  rectWidthPic1 = displayWidth*8/10;
+  rectHeightPic1 = displayHeight*1.5/10;
+  imageWidthRatioPic1 = float(pic1Width) / float(pic1Width); // largerDimension / largerDimension (Landscape only)
+  imageHeightRatioPic1 = float(pic1Height) / float(pic1Width); // smallerDimension / largerDimension (Landscape only)
+  pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
+  pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
+  words = "This is unfortunate";
+  wordFont = createFont("Corbel", 55);
+  
+  println (pic1WidthAdjusted, pic1HeightAdjusted);
+  
+  //Image
+  pic1 = loadImage("speechbubble.png"); //Dimensions
 } //End population

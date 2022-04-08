@@ -23,6 +23,7 @@ void draw()
   rightEyeDraw();
   noseDraw();
   MouthDraw();
+  textbubbleDraw();
 } //End draw
 //
 void keyPressed() 
