@@ -19,11 +19,6 @@ void population ()
   rightPupilY = rightEyeY;
   eyeDiameter = smallerDisplayDimension*1/4;
   pupilDiameter = eyeDiameter*1/3;
-  mouthX1 = leftEyeX;
-  mouthY1 = appHeight*3/4;
-  mouthX2 = rightEyeX;
-  mouthY2 = mouthY1;
-  mouthOpen = smallerDisplayDimension*1/4;
   xNose1 = faceX;
   yNose1 = leftEyeY;
   xNose2 = faceX;
@@ -40,7 +35,17 @@ void population ()
   imageHeightRatioPic1 = float(pic1Height) / float(pic1Width); // smallerDimension / largerDimension (Landscape only)
   pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
   pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
-  words = "This is unfortunate";
+  pic2Width = 1000;
+  pic2Height = 394;
+  rectXPic2 = displayWidth*4/10;
+  rectYPic2 = displayHeight*6.5/10;
+  rectWidthPic2 = displayWidth*6/10;
+  rectHeightPic2 = displayHeight*7.5/10;
+  imageWidthRatioPic2 = float(pic2Width) / float(pic2Width); // largerDimension / largerDimension (Landscape only)
+  imageHeightRatioPic2 = float(pic2Height) / float(pic2Width); // smallerDimension / largerDimension (Landscape only)
+  pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
+  pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+  words = "This sucks.";
   wordFont = createFont("Verdana Italic", 48);
   rect1X = appWidth*1/3;
   rect1Y = appHeight*1/9;
@@ -58,5 +63,6 @@ void population ()
   println (pic1WidthAdjusted, pic1HeightAdjusted);
 
   //Image
-  pic1 = loadImage("speechbubble.png"); //Dimensions
+  pic1 = loadImage("speechbubble.png"); //Dimensions 1200, 1075
+  pic2 = loadImage("BoredomMouth.png"); //Dimensions 1000, 394
 } //End population

@@ -2,7 +2,7 @@
 int appWidth, appHeight;
 Boolean nightMode=false;
 int reset, smallerDisplayDimension;
-color whiteReset;
+color whiteReset, red=#F00C0C;
 //
 float eyeDiameter, pupilDiameter;
 color pupilColour;
@@ -24,7 +24,6 @@ void draw()
   noseDraw();
   MouthDraw();
   textbubbleDraw();
-  measlerectDraw();
 } //End draw
 //
 void keyPressed() 

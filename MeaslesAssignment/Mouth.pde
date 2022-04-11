@@ -1,18 +1,17 @@
 //Global Variables
-int mouthOpen;
-float mouthX1, mouthY1, mouthX2, mouthY2;
-int mouthWidth, mouthHeight;
+PImage pic2;
+int pic2Width, pic2Height;
+float pic2WidthAdjusted, pic2HeightAdjusted;
+float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
+float imageWidthRatioPic2=0.0, imageHeightRatioPic2=0.0;
 //
 void MouthDraw() 
 {
   //Mouth
-  //rect(mouthX1-mouthOpen*1/2, mouthY1-mouthOpen*1/2, mouthWidth+mouthOpen, mouthHeight);
-  int mouthWidth = int (mouthX2 - mouthX1);
-  int mouthHeight = mouthOpen;
-  strokeWeight(mouthOpen); //testing: 100=400/4 mouthOpen=height*1/4
-  line(mouthX1, mouthY1, mouthX2, mouthY2);
-  strokeWeight(reset); //reset to 1 pixel
-  mouthWidth = int (mouthX2 - mouthX1);
-  mouthHeight = mouthOpen;
-  //
+
+  pic2 = loadImage("BoredomMouth.png"); //Dimensions 1000, 394
+  //Rectangle Layout
+  //fill(red);
+  //rect(rectXPic2, rectYPic2, pic2WidthAdjusted*1/2, pic2HeightAdjusted*1/1.3);
+  image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted*1/2, pic2HeightAdjusted*1/1.3);
 }//End MouthDraw
