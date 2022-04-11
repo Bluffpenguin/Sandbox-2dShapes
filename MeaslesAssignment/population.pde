@@ -42,9 +42,21 @@ void population ()
   pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
   words = "This is unfortunate";
   wordFont = createFont("Verdana Italic", 48);
-  
+  rect1X = appWidth*1/3;
+  rect1Y = appHeight*1/9;
+  rect1Width = appWidth*1.35/4;
+  rect1Height = appHeight*7/9;
+  rect2X = appWidth*1/4;
+  rect2Y = appHeight*2.4/9;
+  rect2Width = appWidth*2/4;
+  rect2Height = appHeight*4/9;
+  rect3X = appWidth*1.5/4;
+  rect3Y = appHeight*1/20;
+  rect3Width = appWidth*1.55/6;
+  rect3Height = appHeight*18/20;
+
   println (pic1WidthAdjusted, pic1HeightAdjusted);
-  
+
   //Image
   pic1 = loadImage("speechbubble.png"); //Dimensions
 } //End population

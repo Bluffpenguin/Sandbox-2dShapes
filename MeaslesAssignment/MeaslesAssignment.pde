@@ -24,6 +24,7 @@ void draw()
   noseDraw();
   MouthDraw();
   textbubbleDraw();
+  measlerectDraw();
 } //End draw
 //
 void keyPressed() 
