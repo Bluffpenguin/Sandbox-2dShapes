@@ -41,7 +41,7 @@ void population ()
   pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
   pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
   words = "This is unfortunate";
-  wordFont = createFont("Corbel", 55);
+  wordFont = createFont("Verdana Italic", 48);
   
   println (pic1WidthAdjusted, pic1HeightAdjusted);
   
