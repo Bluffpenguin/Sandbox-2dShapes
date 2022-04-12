@@ -1,3 +1,20 @@
+//Global Variables
+String landscape, portrait, displayOrientation;
+//
+void displayOrientation() 
+{
+  //Landscape, not portrait nor square
+  landscape = "You are good to go!";
+  portrait = "Turn your phone!";
+  displayOrientation = ( displayWidth >= displayHeight ) ? landscape : portrait;
+  if ( displayOrientation==portrait ) println (displayOrientation ); //Portrait Display Orientation
+  if ( displayOrientation==landscape ) appWidth = displayWidth; //option displayWidth
+  if ( displayOrientation==landscape ) appHeight = displayHeight; //option displayHeight
+  println (appWidth, appHeight); //will be NULL if portrait... until landscape (future lesson)
+  //
+}//End displayOrientation
+//
+//
 void displaySetup() 
 {
   //Display Geometry
@@ -12,11 +29,4 @@ void displaySetup()
   String orientation = ( displayWidth >= displayHeight ) ? "Landscape or Square": "Portrait"; 
   println("Display Orientation:", orientation); //Verify Veriables
   if ( orientation=="Portrait" ) println("Turn your phun");
-  /* if ( orientation=="Landscape or Square") 
-   {
-   //Empty IF
-   } else { 
-   println("Turn your phun");
-   } //FUN
-   */
 }//End displaySetup

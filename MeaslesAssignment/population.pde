@@ -59,6 +59,12 @@ void population ()
   rect3Y = appHeight*1/20;
   rect3Width = appWidth*1.55/6;
   rect3Height = appHeight*18/20;
+  centerX = appWidth*1/2;
+  centerY = appHeight*1/2;
+  quitButtonX = centerX - appWidth*1/4; // 1/4 on one-half, 1/4 on other half
+  quitButtonY = centerY - appHeight*1/4;
+  quitButtonWidth = appWidth*1/2;
+  quitButtonHeight = appHeight*1/2;
 
   println (pic1WidthAdjusted, pic1HeightAdjusted);
 
