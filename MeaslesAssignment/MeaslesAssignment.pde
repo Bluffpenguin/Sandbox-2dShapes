@@ -25,14 +25,17 @@ void draw()
   noseDraw();
   MouthDraw();
   textbubbleDraw();
+  quitButtonDraw();
 } //End draw
 //
 void keyPressed() 
 {
+  quitButtonkeyPressed();
 } //End keypressed
 //
 void mousePressed() 
 {
+  quitButtonmousePressed();
 } //End mousePressed
 //
 //End Main Program

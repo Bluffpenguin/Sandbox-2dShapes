@@ -45,8 +45,10 @@ void population ()
   imageHeightRatioPic2 = float(pic2Height) / float(pic2Width); // smallerDimension / largerDimension (Landscape only)
   pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
   pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
-  words = "This sucks.";
-  wordFont = createFont("Verdana Italic", 48);
+  Bubblewords = "This sucks.";
+  Quitwords = "Quit(Q)";
+  BwordFont = createFont("Verdana Italic", 48);
+  Qwordfont = createFont("Corbel", 48);
   rect1X = appWidth*1/3;
   rect1Y = appHeight*1/9;
   rect1Width = appWidth*1.35/4;
@@ -59,12 +61,10 @@ void population ()
   rect3Y = appHeight*1/20;
   rect3Width = appWidth*1.55/6;
   rect3Height = appHeight*18/20;
-  centerX = appWidth*1/2;
-  centerY = appHeight*1/2;
-  quitButtonX = centerX - appWidth*1/4; // 1/4 on one-half, 1/4 on other half
-  quitButtonY = centerY - appHeight*1/4;
-  quitButtonWidth = appWidth*1/2;
-  quitButtonHeight = appHeight*1/2;
+  quitButtonX = appWidth*1/30; // 1/4 on one-half, 1/4 on other half
+  quitButtonY = appHeight*1/30;
+  quitButtonWidth = appWidth*1/8;
+  quitButtonHeight = appHeight*1/8;
 
   println (pic1WidthAdjusted, pic1HeightAdjusted);
 

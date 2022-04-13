@@ -1,7 +1,8 @@
 //Global Variables
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 color Quitred=#FF0F00, Quitgrey=#A29F9F, buttonColour;
-int centerX, centerY;
+String Quitwords;
+PFont Qwordfont;
 //
 void quitButtonDraw() 
 {
@@ -15,11 +16,22 @@ void quitButtonDraw()
   } else {
     buttonColour = Quitgrey;
   }//End Hover-Over Effect
-  //Alternate verification that mouseX&Y is on the button
-  println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth, "\t\t Look at the middle value");
-  println("Y-value", quitButtonY, mouseY, quitButtonY+quitButtonHeight, "\t\t Look at the middle value");
   //
   fill(buttonColour);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
   fill(whiteReset);
+  //
+  textAlign(CENTER, CENTER);
+  textFont(Qwordfont, 70);
+  text(Quitwords, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
 }//End quitButtonDraw
+//
+void quitButtonmousePressed() 
+{
+  if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) exit();
+}//End quitButtonmousePressed
+//
+void quitButtonkeyPressed() 
+{
+  if ( key=='Q' || key=='q' ) exit();
+}//End quitButtonkeyPressed
