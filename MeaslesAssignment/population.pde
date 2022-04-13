@@ -47,8 +47,9 @@ void population ()
   pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
   Bubblewords = "This sucks.";
   Quitwords = "Quit(Q)";
+  ResWords = "Restart(R)";
   BwordFont = createFont("Verdana Italic", 48);
-  Qwordfont = createFont("Corbel", 48);
+  Buttonwordfont = createFont("Corbel", 48);
   rect1X = appWidth*1/3;
   rect1Y = appHeight*1/9;
   rect1Width = appWidth*1.35/4;
@@ -65,6 +66,10 @@ void population ()
   quitButtonY = appHeight*1/30;
   quitButtonWidth = appWidth*1/8;
   quitButtonHeight = appHeight*1/8;
+  rButtonX = appWidth*1/30;
+  rButtonY = appHeight*1/4;
+  rButtonWidth = appWidth*1/8;
+  rButtonHeight = appHeight*1/6;
 
   println (pic1WidthAdjusted, pic1HeightAdjusted);
 

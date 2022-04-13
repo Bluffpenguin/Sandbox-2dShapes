@@ -5,7 +5,9 @@ int reset, smallerDisplayDimension;
 color whiteReset, red=#F00C0C;
 //
 float eyeDiameter, pupilDiameter;
-color pupilColour;
+float faceX, faceY, faceDiameter;
+color pupilColour, buttonColour;
+PFont Buttonwordfont;
 //
 void setup() 
 {
@@ -26,16 +28,19 @@ void draw()
   MouthDraw();
   textbubbleDraw();
   quitButtonDraw();
+  restartButtonDraw();
 } //End draw
 //
 void keyPressed() 
 {
   quitButtonkeyPressed();
+  restartButtonkeyPressed();
 } //End keypressed
 //
 void mousePressed() 
 {
   quitButtonmousePressed();
+  restartButtonmousePressed();
 } //End mousePressed
 //
 //End Main Program
