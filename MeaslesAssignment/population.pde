@@ -72,7 +72,7 @@ void population ()
   rButtonWidth = appWidth*1/8;
   rButtonHeight = appHeight*1/8;
   sButtonX = appWidth*1/30;
-  sButtonY = appHeight*2/4;
+  sButtonY = appHeight*1.8/4;
   sButtonWidth = appWidth*1/8;
   sButtonHeight = appHeight*1/8;
 

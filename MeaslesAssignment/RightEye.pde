@@ -5,6 +5,7 @@ float rightPupilX, rightPupilY;
 void rightEyeDraw() 
 {
   //Right Eye
+  whiteReset=#FFFFFF;
   //rect(rightEyeX-eyeDiameter*1/2, rightEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
   ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
   //Pupil

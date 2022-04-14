@@ -17,8 +17,8 @@ void textbubbleDraw()
   //fill(red);
   //rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
   image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted*1/3, pic1HeightAdjusted);
-  fill(grey);
   textAlign(LEFT, CENTER);
   textFont(BwordFont, 70);
+  fill(grey);
   text(Bubblewords, rectXPic1*1.1, rectYPic1*1/1.3, pic1WidthAdjusted, pic1HeightAdjusted);
 }//End textbubbleDraw

@@ -8,6 +8,7 @@ float eyeDiameter, pupilDiameter;
 float faceX, faceY, faceDiameter;
 color pupilColour, buttonColour;
 PFont Buttonwordfont;
+boolean Start = false;
 //
 void setup() 
 {
@@ -21,27 +22,32 @@ void setup()
 //
 void draw() 
 {
-  measleDraw();
   leftEyeDraw();
   rightEyeDraw();
   noseDraw();
   MouthDraw();
-  textbubbleDraw();
   quitButtonDraw();
   restartButtonDraw();
   startButtonDraw();
+  textbubbleDraw();
+  //
+  if ( Start == true) {
+    measleDraw();
+  }
 } //End draw
 //
 void keyPressed() 
 {
   quitButtonkeyPressed();
   restartButtonkeyPressed();
+  startButtonkeyPressed();
 } //End keypressed
 //
 void mousePressed() 
 {
   quitButtonmousePressed();
   restartButtonmousePressed();
+  startButtonmousePressed();
 } //End mousePressed
 //
 //End Main Program

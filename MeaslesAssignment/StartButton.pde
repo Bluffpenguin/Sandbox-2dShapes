@@ -20,3 +20,13 @@ void startButtonDraw()
   textFont(Buttonwordfont, 70);
   text(StWords, sButtonX, sButtonY, sButtonWidth, sButtonHeight);
 }//end startButtonDraw
+//
+void startButtonmousePressed() 
+{
+  if (mouseX>sButtonX && mouseX<sButtonX+sButtonWidth && mouseY>sButtonY && mouseY<sButtonY+sButtonHeight ) Start = true;
+}//End startButtonmousePressed
+//
+void startButtonkeyPressed() 
+{
+  if ( key=='S' || key=='s' ) Start = true;
+}//End startButtonkeyPressed
