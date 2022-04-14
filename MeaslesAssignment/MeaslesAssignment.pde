@@ -29,10 +29,10 @@ void draw()
   quitButtonDraw();
   restartButtonDraw();
   startButtonDraw();
-  textbubbleDraw();
   //
   if ( Start == true) {
     measleDraw();
+    textbubbleDraw();
   }
 } //End draw
 //

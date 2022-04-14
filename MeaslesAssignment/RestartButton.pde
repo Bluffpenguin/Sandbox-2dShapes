@@ -23,11 +23,18 @@ void restartButtonDraw()
 //
 void restartButtonmousePressed() 
 {
-  if (mouseX>rButtonX && mouseX<rButtonX+rButtonWidth && mouseY>rButtonY && mouseY<rButtonY+rButtonHeight ) ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  if (mouseX>rButtonX && mouseX<rButtonX+rButtonWidth && mouseY>rButtonY && mouseY<rButtonY+rButtonHeight ) 
+  {
+    Start = false;
+    ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  }
 }//End restartButtonmousePressed
 //
 void restartButtonkeyPressed() 
 {
-  if ( key=='R' || key=='r' ) ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  if ( key=='R' || key=='r' ) {
+    Start = false;
+    ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  }
 }
 //
